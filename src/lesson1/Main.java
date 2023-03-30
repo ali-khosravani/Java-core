@@ -1,6 +1,7 @@
 package lesson1;
 
 import lesson2.User;
+import lesson3.CreateRandom;
 
 /**
  * Author: Ali Khosravani.
@@ -12,5 +13,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Java...");
         System.out.println("Hello "+User.fullName());
+        CreateRandom createRandom = new CreateRandom();
+        int random =  createRandom.RandomNumber(3,20);
+        System.out.println(random);
     }
 }
