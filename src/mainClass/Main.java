@@ -1,7 +1,7 @@
-package lesson1;
+package mainClass;
 
-import lesson2.User;
-import lesson3.CreateRandom;
+import inheritClass.User;
+import mathClass.CreateRandom;
 
 /**
  * Author: Ali Khosravani.

@@ -1,4 +1,4 @@
-package lesson1;
+package mainClass;
 
 /**
  * Author: Ali Khosravani.

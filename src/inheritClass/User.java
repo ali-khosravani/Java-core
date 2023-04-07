@@ -1,6 +1,6 @@
-package lesson2;
+package inheritClass;
 
-import lesson1.Person;
+import mainClass.Person;
 
 /**
  * Author: Ali Khosravani

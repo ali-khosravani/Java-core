@@ -1,4 +1,4 @@
-package lesson3;
+package mathClass;
 
 /**
  * Author: Ali Khosravani

@@ -1,4 +1,4 @@
-package lesson4;
+package designPattern;
 
 public class Singleton {
     private static Singleton instance = null;
