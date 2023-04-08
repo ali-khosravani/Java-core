@@ -15,6 +15,7 @@ public class Main {
         System.out.println("Hello "+User.fullName());
         MathClass createRandom = new MathClass();
         int random =  createRandom.RandomNumber(3,20);
-        System.out.println(random);
+        int shortIf = random<10? random:random-20;
+        System.out.println(shortIf);
     }
 }

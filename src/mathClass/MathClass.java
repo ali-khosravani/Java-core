@@ -10,4 +10,16 @@ public class MathClass {
         int random_number = (int)(Math.random()*(b-a+1)+a);
         return random_number;
     }
+
+    public static void main(String[] args) {
+        if (10<5) {
+            System.out.println(Math.min(15, 20));
+        }
+        else if (10 == 5){
+            System.out.println((int)Math.sqrt(4));
+        }
+        else {
+            System.out.println(Math.abs(-23));
+        }
+    }
 }
