@@ -11,6 +11,16 @@ public class LoopClass {
             sum += i;
         }
         System.out.println(sum);
+
+        for (int i =0 ;i<6; i++){
+            if (i ==3){
+                continue;
+            }
+            if(i ==5) {
+                break;
+            }
+            System.out.println(i);
+        }
     }
 
 }
