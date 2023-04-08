@@ -1,7 +1,7 @@
 package mainClass;
 
 import inheritClass.User;
-import mathClass.CreateRandom;
+import mathClass.MathClass;
 
 /**
  * Author: Ali Khosravani.
@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Java...");
         System.out.println("Hello "+User.fullName());
-        CreateRandom createRandom = new CreateRandom();
+        MathClass createRandom = new MathClass();
         int random =  createRandom.RandomNumber(3,20);
         System.out.println(random);
     }
