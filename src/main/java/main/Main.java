@@ -1,4 +1,4 @@
-package main.java.mainn;
+package main.java.main;
 
 import main.java.inherit.User;
 import main.java.math.MathClass;

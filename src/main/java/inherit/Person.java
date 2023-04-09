@@ -1,11 +1,11 @@
-package main.java.mainn;
+package main.java.inherit;
 
 /**
  * Author: Ali Khosravani.
  * Date: 29-04-2023
  * Desc: create Person class.
  */
-public class Person {
+class Person {
     private String firstName;
     private String lastName;
 

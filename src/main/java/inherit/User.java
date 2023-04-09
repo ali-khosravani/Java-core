@@ -1,7 +1,5 @@
 package main.java.inherit;
 
-import main.java.mainn.Person;
-
 /**
  * Author: Ali Khosravani
  * Date: 29-04-2023
@@ -14,7 +12,5 @@ public class User extends Person {
         user.setFirstName("Ali");
         user.setLastName("Khosravani");
         return user.getFirstName() + " " + user.getLastName();
-
-
     }
 }
