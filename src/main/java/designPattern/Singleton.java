@@ -1,4 +1,4 @@
-package designPattern;
+package main.java.designPattern;
 
 public class Singleton {
     private static Singleton instance = null;

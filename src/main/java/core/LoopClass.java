@@ -1,4 +1,4 @@
-package javaConcept;
+package main.java.core;
 
 public class LoopClass {
     //while , do while , for , for -each

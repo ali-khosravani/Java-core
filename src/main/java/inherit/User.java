@@ -1,6 +1,6 @@
-package inheritClass;
+package main.java.inherit;
 
-import mainClass.Person;
+import main.java.mainn.Person;
 
 /**
  * Author: Ali Khosravani

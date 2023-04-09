@@ -1,7 +1,7 @@
-package mainClass;
+package main.java.mainn;
 
-import inheritClass.User;
-import mathClass.MathClass;
+import main.java.inherit.User;
+import main.java.math.MathClass;
 
 /**
  * Author: Ali Khosravani.

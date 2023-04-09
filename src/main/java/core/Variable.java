@@ -1,4 +1,4 @@
-package javaConcept;
+package main.java.core;
 
 /**
  * JavaDoc

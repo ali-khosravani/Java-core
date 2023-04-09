@@ -1,4 +1,4 @@
-package mathClass;
+package main.java.math;
 
 /**
  * Author: Ali Khosravani

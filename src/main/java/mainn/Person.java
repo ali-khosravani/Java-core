@@ -1,4 +1,4 @@
-package mainClass;
+package main.java.mainn;
 
 /**
  * Author: Ali Khosravani.
