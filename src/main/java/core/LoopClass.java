@@ -1,5 +1,9 @@
 package main.java.core;
 
+import java.util.stream.IntStream;
+
+import static java.util.stream.IntStream.*;
+
 public class LoopClass {
     //while , do while , for , for -each
 
@@ -7,20 +11,12 @@ public class LoopClass {
         //foreach
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int sum = 0;
-        for (int i :numbers){
+        for (int i : numbers) {
             sum += i;
         }
         System.out.println(sum);
 
-        for (int i =0 ;i<6; i++){
-            if (i ==3){
-                continue;
-            }
-            if(i ==5) {
-                break;
-            }
-            System.out.println(i);
-        }
+        range(0, 6).filter(i -> i != 3).takeWhile(i -> i != 5).forEach(System.out::println);
     }
 
 }
