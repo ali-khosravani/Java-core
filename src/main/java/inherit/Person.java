@@ -5,7 +5,7 @@ package main.java.inherit;
  * Date: 29-04-2023
  * Desc: create Person class.
  */
-class Person {
+public class Person {
     private String firstName;
     private String lastName;
 
