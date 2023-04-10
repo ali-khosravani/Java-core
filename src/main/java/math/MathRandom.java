@@ -5,7 +5,7 @@ package main.java.math;
  * Date: 2023-04-30
  * Desc: Create Random number between 2 number.
  */
-public class MathClass {
+public class MathRandom {
     public int RandomNumber(int a, int b){
         int random_number = (int)(Math.random()*(b-a+1)+a);
         return random_number;
