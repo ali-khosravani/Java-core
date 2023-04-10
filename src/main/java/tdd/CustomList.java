@@ -7,23 +7,11 @@ public class CustomList<E> implements List<E> {
 
     @Override
     public int size() {
-//        if (isEmpty()){
-//            return 0;
-//        }
-//        else {
-//            return internal.length;
-//        }
         return internal.length;
     }
 
     @Override
     public boolean isEmpty() {
-//        if (internal.length !=0){
-//            return false;
-//        }
-//        else{
-//            return true;
-//        }
         return internal.length == 0;
     }
 
