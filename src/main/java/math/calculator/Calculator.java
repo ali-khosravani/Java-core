@@ -1,4 +1,4 @@
-package main.java.math;
+package main.java.math.calculator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +14,7 @@ public class Calculator extends JFrame {
         setResizable(false);
         setTitle("Calculator");
         setLayout(null);
-        setSize(300,450);
+        setSize(290,395);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
