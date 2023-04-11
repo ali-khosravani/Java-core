@@ -11,10 +11,7 @@ public class Board extends JPanel {
     private void initBoard() {
         setBackground(new Color(200,200,255));
         setLayout(null);
-        setBounds(20,0,300,450);
-
-
-
+        setBounds(0,20,300,450);
     }
 }
 
