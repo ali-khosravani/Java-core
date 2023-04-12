@@ -3,15 +3,13 @@ package main.java.prime;
 import java.util.Scanner;
 
 public class Prime {
-
-    public  boolean isPrime(int x) {
-        boolean flag= false;
-        for (int i = 2; i < x; i++) {
+    public boolean isPrime(int x) {
+        boolean flag= true;
+        for (int i = 2; i <(int) Math.sqrt(x)+1; i++) {
             if (x % i == 0){
                 flag =false;
                 break;
             }
-            flag =true;
         }
         return flag;
     }
