@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Board extends JPanel implements ActionListener {
+    double number1, number2, result = 0;
+    boolean flag = false;
+    short operatorFlag = 1;
     JTextArea ta;
     JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jButton0, jButtonDot;
     JButton jButtonMC, jButtonMR, jButtonMS, jButtonMPlus, jButtonMMinus, jButtonCE, jButtonC;
@@ -155,7 +158,7 @@ public class Board extends JPanel implements ActionListener {
         add(jButtonMPlus);
         jButtonMPlus.addActionListener(this);
         add(jButtonMMinus);
-        jButtonMinus.addActionListener(this);
+        jButtonMMinus.addActionListener(this);
 
         add(jButtonBack);
         jButtonBack.addActionListener(this);
@@ -217,35 +220,140 @@ public class Board extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
         if (obj == jButton0) {
-            if (ta.getText()=="0"){
+            if (Double.parseDouble(ta.getText()) == 0) {
                 ta.setText("0");
-            }else {
+            } else {
                 ta.setText(ta.getText().concat("0"));
             }
         } else if (obj == jButton1) {
-            if (ta.getText()=="0"){
+            if (Double.parseDouble(ta.getText()) == 0) {
                 ta.setText("1");
-            }else{
+            } else {
                 ta.setText(ta.getText().concat("1"));
             }
         } else if (obj == jButton2) {
-            ta.setText("2");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("2");
+            } else {
+                ta.setText(ta.getText().concat("2"));
+            }
         } else if (obj == jButton3) {
-            ta.setText("3");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("3");
+            } else {
+                ta.setText(ta.getText().concat("3"));
+            }
         } else if (obj == jButton4) {
-            ta.setText("4");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("4");
+            } else {
+                ta.setText(ta.getText().concat("4"));
+            }
         } else if (obj == jButton5) {
-            ta.setText("5");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("5");
+            } else {
+                ta.setText(ta.getText().concat("5"));
+            }
         } else if (obj == jButton6) {
-            ta.setText("6");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("6");
+            } else {
+                ta.setText(ta.getText().concat("6"));
+            }
         } else if (obj == jButton7) {
-            ta.setText("7");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("7");
+            } else {
+                ta.setText(ta.getText().concat("7"));
+            }
         } else if (obj == jButton8) {
-            ta.setText("8");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("8");
+            } else {
+                ta.setText(ta.getText().concat("8"));
+            }
         } else if (obj == jButton9) {
-            ta.setText("9");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("9");
+            } else {
+                ta.setText(ta.getText().concat("9"));
+            }
         } else if (obj == jButtonDot) {
-            ta.setText(".");
+            if (Double.parseDouble(ta.getText()) == 0) {
+                ta.setText("0.");
+            } else {
+                ta.setText(ta.getText().concat("."));
+            }
+        }
+
+
+        //clear Text
+        else if (obj == jButtonC) {
+            ta.setText("0");
+            flag = false;
+            number2 = 0;
+            number1 = 0;
+        } else if (obj == jButtonCE) {
+            ta.setText("0");
+
+        }
+
+        //if user press + - * /
+        else if (obj == jButtonPlus) {
+            flag = true;
+            number1 = Double.parseDouble(ta.getText());
+            ta.setText("0");
+            operatorFlag = 1;
+        } else if (obj == jButtonMinus) {
+            flag = true;
+            number1 = Double.parseDouble(ta.getText());
+            operatorFlag = 2;
+            ta.setText("0");
+        } else if (obj == jButtonMultiplication) {
+            flag = true;
+            number1 = Double.parseDouble(ta.getText());
+            operatorFlag = 3;
+            ta.setText("0");
+        } else if (obj == jButtonDivision) {
+            flag = true;
+            number1 = Double.parseDouble(ta.getText());
+            ta.setText("0");
+            operatorFlag = 4;
+        }
+        //if user press =
+        else if (obj == jButtonEqual) {
+            if (flag) {
+                number2 = Double.parseDouble(ta.getText());
+                switch (operatorFlag) {
+                    case 1 -> result = number1 + number2;
+                    case 2 -> result = number1 - number2;
+                    case 3 -> result = number1 * number2;
+                    case 4 -> result = number1 / number2;
+                    default -> ta.setText("Error");
+                }
+            }
+            ta.setText(String.valueOf(result));
+            number2=0;
+            number1=0;
+        }
+
+        //clear last digit
+        else if (obj==jButtonBack) {
+            if (ta.getText().length()>1){
+                StringBuilder stringBuilder=new StringBuilder(ta.getText());
+                ta.setText(stringBuilder.deleteCharAt(stringBuilder.length()-1).toString());
+            }
+            else{
+                ta.setText("0");
+            }
+
+        }
+        //If user pres +/-
+        else if (obj == jButtonPlusMinus) {
+            double x =Double.parseDouble(ta.getText());
+            x=x*(-1);
+            ta.setText(Double.toString(x));
         }
 
     }
