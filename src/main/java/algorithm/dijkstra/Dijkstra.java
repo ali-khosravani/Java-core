@@ -3,10 +3,10 @@ package main.java.algorithm.dijkstra;
 public class Dijkstra {
     static final int V = 9;
 
-    int minDistance(int dist[], Boolean sptSet[]) {
+    int minDistance(int[] dist, Boolean[] sptSet) {
         int min = Integer.MAX_VALUE, min_index = -1;
         for (int v = 0; v < V; v++) {
-            if (sptSet[v] == false && dist[v] <= min) {
+            if (!sptSet[v] && dist[v] <= min) {
                 min = dist[v];
                 min_index = v;
             }
@@ -14,21 +14,21 @@ public class Dijkstra {
         return min_index;
     }
 
-    void printSolution(int dist[], int n) {
+    void printSolution(int[] dist) {
         System.out.println("Vertex Distance from Source");
         for (int i = 0; i < V; i++) {
             System.out.println(i + " tt " + dist[i]);
         }
     }
 
-    void dijkstra(int graph[][], int src) {
-        int dist[] = new int[V];
-        Boolean sptSet[] = new Boolean[V];
+    void dijkstra(int[][] graph) {
+        int[] dist = new int[V];
+        Boolean[] sptSet = new Boolean[V];
         for (int i = 0; i < V; i++) {
             dist[i] = Integer.MAX_VALUE;
             sptSet[i] = false;
         }
-        dist[src] = 0;
+        dist[0] = 0;
 
         for (int count = 0; count < V - 1; count++) {
             int u = minDistance(dist, sptSet);
@@ -40,11 +40,11 @@ public class Dijkstra {
                 }
             }
         }
-        printSolution(dist, V);
+        printSolution(dist);
     }
 
     public static void main(String[] args) {
-        int graph[][]
+        int[][] graph
                 = new int[][]{
                 {0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},
@@ -57,6 +57,6 @@ public class Dijkstra {
                 {0, 0, 2, 0, 0, 6, 7, 0}
         };
         Dijkstra d = new Dijkstra();
-        d.dijkstra(graph, 0);
+        d.dijkstra(graph);
     }
 }

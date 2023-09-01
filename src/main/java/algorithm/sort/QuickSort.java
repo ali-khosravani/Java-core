@@ -5,9 +5,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     private static void quickSort(int[] array , int begin , int end) {
-        if (begin >= end) {
-            return;
-        } else {
+        if (begin < end) {
             int temp = partition(array,begin , end);
             quickSort(array,begin,temp-1);
             quickSort(array,temp+1,end);
@@ -34,7 +32,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         //int array[]={5,4,3,2,1,9,14,6,25,17,19,11,10,8};
-        int [] arr={6,5,3,1,4,7,2,8};
+        int [] arr={6,1,15,5,3,1,4,7,2,8};
         quickSort(arr,0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }

@@ -4,5 +4,4 @@ public class DivideZeroException extends Exception{
     public DivideZeroException(String message) {
         super(message);
     }
-
 }
