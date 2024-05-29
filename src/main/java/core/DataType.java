@@ -11,8 +11,6 @@ public class DataType {
     Non-primitive data types - such as String,Arrays ,Classes , Interface
      */
 
-    private  long longNumber = 123456;
-
     public boolean isCheckedValue() {
         return checkedValue;
     }
@@ -24,9 +22,10 @@ public class DataType {
     private boolean checkedValue = true;
 
 
-    private char number = 325;
-    public void showVar(){
-        System.out.println(number +" "+longNumber +" "+checkedValue);
+    private void showVar(){
+        long longNumber = 123456;
+        char number = 327;
+        System.out.println(longNumber +"\n"+number +"\n"+ checkedValue);
     }
     public static void main(String[] args) {
         // byte -> short -> char -> int -> long -> float -> double

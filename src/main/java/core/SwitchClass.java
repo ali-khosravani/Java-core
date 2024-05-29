@@ -1,32 +1,20 @@
 package main.java.core;
 
+import java.util.Scanner;
+
 public class SwitchClass {
     public static void main(String[] args) {
-        int day = 5;
-        switch (day){
-            case 1:
-                System.out.println("Sat");
-                break;
-            case 2:
-                System.out.println("Son");
-                break;
-            case 3:
-                System.out.println("Mon");
-                break;
-            case 4:
-                System.out.println("Thu");
-                break;
-            case 5:
-                System.out.println("Wed");
-                break;
-            case 6:
-                System.out.println("Tue");
-                break;
-            case 7:
-                System.out.println("Fri");
-                break;
-                //No default.
+        Scanner sc = new Scanner(System.in);
+        int day = sc.nextInt();
+        switch (day) {
+            case 1 -> System.out.println("Sunday");
+            case 2 -> System.out.println("Monday");
+            case 3 -> System.out.println("Tuesday");
+            case 4 -> System.out.println("Wednesday");
+            case 5 -> System.out.println("Thursday");
+            case 6 -> System.out.println("Friday");
+            case 7 -> System.out.println("Saturday");
+            default -> System.out.println("Invalid day");
         }
-        System.out.println(day);
     }
 }

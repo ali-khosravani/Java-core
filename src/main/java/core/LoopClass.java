@@ -17,6 +17,7 @@ public class LoopClass {
         System.out.println(sum);
 
         range(0, 6).filter(i -> i != 3).takeWhile(i -> i != 5).forEach(System.out::println);
+//        range(0, 6).filter(i -> i != 3).forEach(i -> System.out.println(i));
     }
 
 }
