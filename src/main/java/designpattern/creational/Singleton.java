@@ -1,21 +1,22 @@
 package main.java.designpattern.creational;
 
-public class Singleton {
+class Singleton {
+    private static Singleton instance = null;
 
     private Singleton() {
     }
 
-    private static final class InstanceHolder {
-        private static final Singleton instance = new Singleton();
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
     }
 
-    public static Singleton getInstance() {
-        return InstanceHolder.instance;
-    }
 
     public static void main(String[] args) {
-        Singleton x = Singleton.getInstance();
-        Singleton y = Singleton.getInstance();
-        System.out.println(x.hashCode() + "  " + y.hashCode());
+        Singleton s1 = Singleton.getInstance();
+        Singleton s2 = Singleton.getInstance();
+        System.out.println(s1 == s2);
     }
 }

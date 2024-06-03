@@ -1,22 +1,18 @@
 package main.java.math;
 
-import main.java.exception.DivideZeroException;
+import java.util.Scanner;
 
 public class DivideZero {
-    public static void main(String[] args){
-        int num1 = 10;
-        int num2 = 0;
-        int num3 ;
+    public static void main(String[] args) {
+        int i = 10;
+        int value;
+        Scanner sc = new Scanner(System.in);
+        int userInput = sc.nextInt();
         try {
-            if (num2 ==0){
-                throw new DivideZeroException("Error: Cannot divide a number by zero");
-            }
-            num3 = num1 / num2;
-            System.out.println(num3);
-        }
-        catch (DivideZeroException e){
-            System.out.println(e.getMessage());
+            value = i / userInput;
+            System.out.println(value);
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
         }
     }
-
 }
