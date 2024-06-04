@@ -26,6 +26,7 @@ public class Variable {
         // Operator + - * / % ++ --
         number++;
         System.out.println(number);
+        System.out.println(numberFinal+" "+numberFlout+" "+myChar);
 
     }
 }

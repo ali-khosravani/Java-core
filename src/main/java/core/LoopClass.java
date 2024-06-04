@@ -1,6 +1,5 @@
 package main.java.core;
 
-import java.util.stream.IntStream;
 
 import static java.util.stream.IntStream.*;
 
