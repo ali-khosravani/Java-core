@@ -9,7 +9,11 @@ public class Person {
     private String firstName;
     private String lastName;
 
-    public Person(){}
+    public Person() {}
+
+    public String fullName() {
+        return getFirstName() + " " + getLastName();
+    }
 
     public String getFirstName() {
         return firstName;

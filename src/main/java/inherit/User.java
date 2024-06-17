@@ -7,7 +7,4 @@ package main.java.inherit;
  */
 public class User extends Person {
 
-    public String FullName() {
-        return getFirstName() + " " + getLastName();
-    }
 }

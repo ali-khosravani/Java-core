@@ -20,11 +20,9 @@ public class Board extends JPanel implements ActionListener {
     private  final  int B_HEIGHT = 500;
     private  final  int DOT_SIZE = 10;
     private  final  int ALL_DOTS = 2500;
-    private  final  int RAND_POS = 29;
-    private  final  int DELAY = 100;
 
-    private  final  int x[] = new int[ALL_DOTS];
-    private  final  int y[] = new int[ALL_DOTS];
+    private  final int[] x = new int[ALL_DOTS];
+    private  final int[] y = new int[ALL_DOTS];
 
     private int dots;
     private int apple_x;
@@ -74,7 +72,8 @@ public class Board extends JPanel implements ActionListener {
         }
 
         locateApple();
-        timer = new Timer(DELAY ,this);
+        int DELAY = 100;
+        timer = new Timer(DELAY,this);
         timer .start();
     }
     @Override
@@ -152,6 +151,7 @@ public class Board extends JPanel implements ActionListener {
 
             if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
                 inGame = false;
+                break;
             }
         }
 
@@ -178,6 +178,7 @@ public class Board extends JPanel implements ActionListener {
 
     private void locateApple() {
 
+        int RAND_POS = 29;
         int r = (int) (Math.random() * RAND_POS);
         apple_x = ((r * DOT_SIZE));
 
