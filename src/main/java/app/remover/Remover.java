@@ -10,11 +10,11 @@ public class Remover extends JFrame {
 
     private void init() {
         add(new Board());
-        pack();
-        setResizable(false);
-        setTitle("Remove Program");
+        setSize(new Dimension(800, 600));
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        setTitle("Remover");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
