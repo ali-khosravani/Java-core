@@ -1,7 +1,7 @@
-package main.java.musicplayer.states;
+package main.java.app.musicplayer.states;
 
 
-import main.java.musicplayer.ui.Player;
+import main.java.app.musicplayer.ui.Player;
 
 public class LockedState extends State {
     LockedState(Player player){

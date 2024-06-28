@@ -8,11 +8,11 @@ class Board extends JPanel implements ActionListener {
 
     JTextField txtName, txtMobileNumber;
     JRadioButton male;
-    JComboBox<String> date, month, year;
-    JTextArea tAdd, tout;
+    JComboBox<String> day, month, year;
+    JTextArea txtAddress, txtOut;
     JCheckBox term;
-    JButton sub, reset;
-    JLabel res;
+    JButton btnSub, btnReset;
+    JLabel lblRes;
 
     public Board() {
         initUI();
@@ -41,11 +41,11 @@ class Board extends JPanel implements ActionListener {
         txtName.setLocation(startColumn2, 100);
         add(txtName);
 
-        JLabel mno = new JLabel("Mobile");
-        mno.setFont(new Font("Arial", Font.PLAIN, 20));
-        mno.setSize(100, 20);
-        mno.setLocation(startColumn1, 150);
-        add(mno);
+        JLabel lblMobileNumber = new JLabel("Mobile");
+        lblMobileNumber.setFont(new Font("Arial", Font.PLAIN, 20));
+        lblMobileNumber.setSize(100, 20);
+        lblMobileNumber.setLocation(startColumn1, 150);
+        add(lblMobileNumber);
 
         txtMobileNumber = new JTextField();
         txtMobileNumber.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -53,11 +53,11 @@ class Board extends JPanel implements ActionListener {
         txtMobileNumber.setLocation(startColumn2, 150);
         add(txtMobileNumber);
 
-        JLabel gender = new JLabel("Gender");
-        gender.setFont(new Font("Arial", Font.PLAIN, 20));
-        gender.setSize(100, 20);
-        gender.setLocation(startColumn1, 200);
-        add(gender);
+        JLabel lblGender = new JLabel("Gender");
+        lblGender.setFont(new Font("Arial", Font.PLAIN, 20));
+        lblGender.setSize(100, 20);
+        lblGender.setLocation(startColumn1, 200);
+        add(lblGender);
 
         male = new JRadioButton("Male");
         male.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -77,18 +77,18 @@ class Board extends JPanel implements ActionListener {
         sexGroup.add(male);
         sexGroup.add(female);
 
-        JLabel dob = new JLabel("DOB");
-        dob.setFont(new Font("Arial", Font.PLAIN, 20));
-        dob.setSize(100, 20);
-        dob.setLocation(startColumn1, 250);
-        add(dob);
+        JLabel lblBirthDate = new JLabel("DOB");
+        lblBirthDate.setFont(new Font("Arial", Font.PLAIN, 20));
+        lblBirthDate.setSize(100, 20);
+        lblBirthDate.setLocation(startColumn1, 250);
+        add(lblBirthDate);
 
-        String[] dates = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
-        date = new JComboBox<>(dates);
-        date.setFont(new Font("Arial", Font.PLAIN, 15));
-        date.setSize(50, 20);
-        date.setLocation(startColumn2, 250);
-        add(date);
+        String[] days = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
+        day = new JComboBox<>(days);
+        day.setFont(new Font("Arial", Font.PLAIN, 15));
+        day.setSize(50, 20);
+        day.setLocation(startColumn2, 250);
+        add(day);
 
         String[] months = {"Jan", "feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sup", "Oct", "Nov", "Dec"};
         month = new JComboBox<>(months);
@@ -110,12 +110,12 @@ class Board extends JPanel implements ActionListener {
         add.setLocation(startColumn1, 300);
         add(add);
 
-        tAdd = new JTextArea();
-        tAdd.setFont(new Font("Arial", Font.PLAIN, 15));
-        tAdd.setSize(200, 75);
-        tAdd.setLocation(startColumn2, 300);
-        tAdd.setLineWrap(true);
-        add(tAdd);
+        txtAddress = new JTextArea();
+        txtAddress.setFont(new Font("Arial", Font.PLAIN, 15));
+        txtAddress.setSize(200, 75);
+        txtAddress.setLocation(startColumn2, 300);
+        txtAddress.setLineWrap(true);
+        add(txtAddress);
 
         term = new JCheckBox("Accept Terms And Conditions.");
         term.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -123,63 +123,57 @@ class Board extends JPanel implements ActionListener {
         term.setLocation(150, 400);
         add(term);
 
-        sub = new JButton("Submit");
-        sub.setFont(new Font("Arial", Font.PLAIN, 15));
-        sub.setSize(100, 20);
-        sub.setLocation(150, 450);
-        sub.addActionListener(this);
-        add(sub);
+        btnSub = new JButton("Submit");
+        btnSub.setFont(new Font("Arial", Font.PLAIN, 15));
+        btnSub.setSize(100, 20);
+        btnSub.setLocation(150, 450);
+        btnSub.addActionListener(this);
+        add(btnSub);
 
-        reset = new JButton("Reset");
-        reset.setFont(new Font("Arial", Font.PLAIN, 15));
-        reset.setSize(100, 20);
-        reset.setLocation(270, 450);
-        reset.addActionListener(this);
-        add(reset);
+        btnReset = new JButton("Reset");
+        btnReset.setFont(new Font("Arial", Font.PLAIN, 15));
+        btnReset.setSize(100, 20);
+        btnReset.setLocation(270, 450);
+        btnReset.addActionListener(this);
+        add(btnReset);
 
-        tout = new JTextArea();
-        tout.setFont(new Font("Arial", Font.PLAIN, 15));
-        tout.setSize(300, 400);
-        tout.setLocation(450, 100);
-        tout.setLineWrap(true);
-        tout.setEditable(false);
-        add(tout);
+        txtOut = new JTextArea();
+        txtOut.setFont(new Font("Arial", Font.PLAIN, 15));
+        txtOut.setSize(300, 400);
+        txtOut.setLocation(450, 100);
+        txtOut.setLineWrap(true);
+        txtOut.setEditable(false);
+        add(txtOut);
 
-        res = new JLabel("");
-        res.setFont(new Font("Arial", Font.PLAIN, 20));
-        res.setSize(500, 25);
-        res.setLocation(startColumn1, 500);
-        add(res);
+        lblRes = new JLabel("");
+        lblRes.setFont(new Font("Arial", Font.PLAIN, 20));
+        lblRes.setSize(500, 25);
+        lblRes.setLocation(startColumn1, 500);
+        add(lblRes);
     }
 
-
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == sub) {
+        if (e.getSource() == btnSub) {
             if (term.isSelected()) {
-                String data1;
-                String data = "Name : " + txtName.getText() + "\n" + "Mobile : " + txtMobileNumber.getText() + "\n";
-                if (male.isSelected()) data1 = "Gender : Male" + "\n";
-                else data1 = "Gender : Female" + "\n";
-                String data2 = "DOB : " + date.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem() + "\n";
-                String data3 = "Address : " + tAdd.getText();
-                tout.setText(data + data1 + data2 + data3);
-                tout.setEditable(false);
-                res.setText("Registration Successfully..");
+                String data1 = (!male.isSelected()) ? "Gender : Female \n" : "Gender : Male \n";
+                String data = "Name : " + txtName.getText() + "\n Mobile : " + txtMobileNumber.getText() + "\n";
+                String data2 = "DOB : " + day.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem() + "\n";
+                String data3 = "Address : " + txtAddress.getText();
+                txtOut.setText(data + data1 + data2 + data3);
+                lblRes.setText("Registration Successfully..");
             } else {
-                tout.setText("");
-                res.setText("Please accept the" + " terms & conditions..");
+                lblRes.setText("Please accept the terms & conditions..");
             }
-        } else if (e.getSource() == reset) {
-            String def = "";
-            txtName.setText(def);
-            tAdd.setText(def);
-            txtMobileNumber.setText(def);
-            res.setText(def);
-            tout.setText(def);
+        } else if (e.getSource() == btnReset) {
             term.setSelected(false);
-            date.setSelectedIndex(0);
+            day.setSelectedIndex(0);
             month.setSelectedIndex(0);
             year.setSelectedIndex(0);
+            txtOut.setText("");
+            txtAddress.setText("");
+            txtName.setText("");
+            txtMobileNumber.setText("");
+            lblRes.setText("");
         }
     }
 }

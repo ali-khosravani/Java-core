@@ -1,4 +1,4 @@
-package main.java.tvremotecontrol;
+package main.java.app.tvremotecontrol;
 
 public class ON implements RemoteControl {
     public static ON INSTANCE = new ON();

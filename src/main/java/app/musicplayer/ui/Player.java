@@ -1,7 +1,7 @@
-package main.java.musicplayer.ui;
+package main.java.app.musicplayer.ui;
 
-import main.java.musicplayer.states.ReadyState;
-import main.java.musicplayer.states.State;
+import main.java.app.musicplayer.states.ReadyState;
+import main.java.app.musicplayer.states.State;
 
 import java.util.ArrayList;
 import java.util.List;

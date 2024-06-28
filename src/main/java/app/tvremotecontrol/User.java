@@ -1,4 +1,4 @@
-package main.java.tvremotecontrol;
+package main.java.app.tvremotecontrol;
 
 public class User {
     public static void main(String[] args) {

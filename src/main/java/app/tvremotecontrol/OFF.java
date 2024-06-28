@@ -1,4 +1,4 @@
-package main.java.tvremotecontrol;
+package main.java.app.tvremotecontrol;
 
 public class OFF implements RemoteControl {
     public static OFF INSTANCE = new OFF();

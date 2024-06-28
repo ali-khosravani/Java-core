@@ -1,4 +1,4 @@
-package main.java.musicplayer.ui;
+package main.java.app.musicplayer.ui;
 
 import javax.swing.*;
 import java.awt.*;

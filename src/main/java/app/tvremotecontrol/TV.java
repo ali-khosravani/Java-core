@@ -1,4 +1,4 @@
-package main.java.tvremotecontrol;
+package main.java.app.tvremotecontrol;
 
 public class TV {
     private RemoteControl state;

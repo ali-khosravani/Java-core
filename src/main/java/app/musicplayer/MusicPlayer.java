@@ -1,6 +1,6 @@
-package main.java.musicplayer;
+package main.java.app.musicplayer;
 
-import main.java.musicplayer.ui.UI;
+import main.java.app.musicplayer.ui.UI;
 public class MusicPlayer {
     public static void main(String[] args) {
 
