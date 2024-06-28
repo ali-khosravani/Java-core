@@ -1,9 +1,11 @@
 package main.java.algorithm.search;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 class LinearSearch {
+
     static void linearSearch(int[] arr , int item) {
         ArrayList<Integer> list = new ArrayList<>();
         int count = 0;
